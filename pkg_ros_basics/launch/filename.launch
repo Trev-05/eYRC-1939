@@ -1,0 +1,10 @@
+<launch>
+<node pkg="pkg_ros_basics" type="node_param_get_set.py" name="node_param_get_set" 
+output="screen"/>
+<rosparam file ="$(pkg_ros_basics)/config/config_my.yaml"/>
+<node pkg="pkg_ros_basics" type="config_my.sh" name="config_my" output="screen">
+        <param name="cmd" value="$(pkg_ros_basics)/launch/config_my.sh"/>
+</node>
+
+</launch>
+
